@@ -16,5 +16,12 @@ def add_lost_item(item):
     mydb.commit()
 
 
-def find_item(item):
+def find_item(item):def find_item():
+    mycursor.execute("SELECT * FROM lost WHERE Keyword =%s", (keyw_f,))
+    myresult = mycursor.fetchall()
+    for result in myresult:
+        print(result)
+
+find_item()
+
     
